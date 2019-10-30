@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an email address: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNG-eD-JUP">
+                                <rect key="frame" x="93" y="87" width="228" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Om8-LZ-dTF">
+                                <rect key="frame" x="93" y="232" width="228" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4X-Ez-66p">
+                                <rect key="frame" x="182.5" y="433" width="49" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QdY-QY-3Gb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="R4X-Ez-66p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IIz-od-qS6"/>
+                            <constraint firstItem="R4X-Ez-66p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MFO-bf-9XK"/>
+                            <constraint firstItem="Om8-LZ-dTF" firstAttribute="top" secondItem="GNG-eD-JUP" secondAttribute="bottom" constant="124.5" id="PEF-we-7ke"/>
+                            <constraint firstItem="GNG-eD-JUP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="gBd-xM-zsJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Om8-LZ-dTF" secondAttribute="trailing" constant="93" id="hm1-gS-sZQ"/>
+                            <constraint firstItem="Om8-LZ-dTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="qVc-yM-bBx"/>
+                            <constraint firstItem="GNG-eD-JUP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="sWO-yG-R8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GNG-eD-JUP" secondAttribute="trailing" constant="93" id="x3s-VI-SzC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Om8-LZ-dTF" id="pan-ZB-J04"/>
+                        <outlet property="submitButton" destination="R4X-Ez-66p" id="QzO-JY-Vk9"/>
+                        <segue destination="R2b-5h-BNM" kind="show" identifier="completionScreenSegue" id="zuB-UZ-pim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SNL-Dz-edE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VQ-jl-DRK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="R2b-5h-BNM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="scm-Nu-Q7b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations, You've successfully entered the contest!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlB-Fr-BZp">
+                                <rect key="frame" x="82" y="366" width="250" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="yZh-TN-Ygi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YlB-Fr-BZp" firstAttribute="top" secondItem="GvW-ej-H3n" secondAttribute="top" constant="366" id="H7q-CY-2S9"/>
+                            <constraint firstItem="GvW-ej-H3n" firstAttribute="bottom" secondItem="YlB-Fr-BZp" secondAttribute="bottom" constant="332" id="iVe-ni-AEE"/>
+                            <constraint firstItem="YlB-Fr-BZp" firstAttribute="centerX" secondItem="scm-Nu-Q7b" secondAttribute="centerX" id="lqw-GD-hBT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GvW-ej-H3n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bwL-bo-uYb"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="899" y="138"/>
+        </scene>
+    </scenes>
+</document>
